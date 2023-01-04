@@ -36,6 +36,7 @@ function onPictureClick(evt) {
   function onEscapePress(evt) {
     if (evt.code === "Escape") {
       instance.close();
+      window.removeEventListener("keydown", onEscapePress);
     }
   }
 }
